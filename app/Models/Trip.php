@@ -17,6 +17,12 @@ class Trip extends Model
         'drive_location',
     ];
 
+    protected $casts = [
+        'origin' => 'array',
+        'destination' => 'array',
+        'drive_location' => 'array',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
