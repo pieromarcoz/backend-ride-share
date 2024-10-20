@@ -20,7 +20,7 @@ class LoginController extends Controller
         // find or create user model
         $user = User::firstOrCreate([
             'name' => $request->name,
-            'phone' => $request->phone,
+            'phone' => '+'.$request->phone,
         ]);
 
         if (!$user) {
